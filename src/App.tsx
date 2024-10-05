@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import { ScrollToTop } from "./core/hooks/ScrollToTop";
+import CustomLoader from "./core/components/CustomLoader";
+import Products from "./pages/Products";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import Quotation from "./pages/Quotation";
+import About from "./pages/About";
+
+const Home = React.lazy(() => import("./pages/Home"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ScrollToTop />
+      <Toaster />
+
+      <Suspense fallback={<CustomLoader />}>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/quotation" element={<Quotation />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
+        </Routes>
+      </Suspense>
+    </Router>
   );
 }
 
