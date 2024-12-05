@@ -27,5 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [addIconSelectors(["mdi", "logos"])],
+  plugins: [addIconSelectors(["mdi", "logos", "solar"])],
 };

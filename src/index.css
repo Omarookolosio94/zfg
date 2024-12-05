@@ -5,6 +5,19 @@
 @tailwind utilities;
 
 @layer components {
+  .bg-home {
+    background: url("./img/factory.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .bg-hero{
+    background: url("./img/warehouse.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -14,16 +27,16 @@
 }
 body::-webkit-scrollbar {
   --tw-bg-opacity: 1;
-  background-color: #f2f3f5;
+  background-color: #262527;
 }
 ::-webkit-scrollbar-track {
   background-color: initial;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 9999px;
-  border: 0.125rem solid #ea670f;
+  border: 0.125rem solid #dbdfe6;
   background-clip: content-box;
-  background-color: #ea670f;
+  background-color: #dbdfe6;
 }
 
 ::-webkit-scrollbar-button {
@@ -42,7 +55,7 @@ body::-webkit-scrollbar {
   font-weight: 100;
   font-style: normal;
 }
-  
+
 .fira-sans-condensed-regular {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -52,7 +65,7 @@ body::-webkit-scrollbar {
 .orbitron {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 

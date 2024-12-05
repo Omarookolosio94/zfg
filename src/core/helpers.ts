@@ -53,3 +53,6 @@ export const scrollWindowToTop = () => {
     window.scrollTo(0, 0);
   }
 };
+
+export const cx = (...classNames: string[]) =>
+  classNames.filter(Boolean).join(" ");
