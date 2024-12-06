@@ -83,10 +83,10 @@ export default function Footer() {
       <div className="mt-10 border-t border-gray-200 bg-secondary py-3 text-center font-mont text-sm text-gray-50">
         <div className="mx-auto w-[90%]">
           <p className="">
-            Copyright © 2012 - {new Date().getFullYear()} StreamFlo. Website
+            Copyright © 2012 - {new Date().getFullYear()} StreamFlo.
           </p>
           <a href="mailto:usewebeffects@gmail.com" className="text-xs hover:underline">
-            Developed by Use Web Effects
+            Website Developed by Use Web Effects
           </a>
           .
         </div>

@@ -7,7 +7,9 @@ import { cx } from "../helpers";
 
 const Navbar = () => {
   const [showSidenav, setSidenav] = useState(false);
+  const [hideSocials, setHideSocials] = useState(false);
   const sideNavRef = useRef<HTMLDivElement | null>(null);
+  const navbarRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -28,10 +30,32 @@ const Navbar = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showSidenav]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navbarRef.current) {
+        const navbarHeight = navbarRef.current.offsetHeight;
+        setHideSocials(window.scrollY > navbarHeight);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <section className="fixed left-0 top-0 z-20 w-full">
-        <div className="bg-secondary">
+        <div
+          id="socials"
+          className={cx(
+            "bg-secondary transition-height duration-300",
+            hideSocials
+              ? "h-0 overflow-hidden opacity-0"
+              : "h-auto opacity-100",
+          )}
+        >
           <div className="mx-auto flex w-[90%] flex-col items-center justify-between py-2 font-mont text-[16px] text-shade md:flex-row">
             <div className="flex items-center gap-3">
               <a href="http://" className="hidden hover:text-white md:block">
@@ -58,7 +82,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="border-b bg-white shadow-sm">
+        <div ref={navbarRef} className="border-b bg-white shadow-sm">
           <nav className="mx-auto flex w-[90%] items-center justify-between py-3">
             <Link to="/" className="flex items-center gap-2">
               <img
@@ -95,12 +119,12 @@ const Navbar = () => {
                 </NavLink>
               ))}
 
-              <Button className="hidden !py-[10px] !border !bg-blue-800 !font-[600] !text-white sm:block">
+              <Button className="hidden !border !bg-blue-800 !py-[10px] !font-[600] !text-white sm:block">
                 GET A QUOTE
               </Button>
 
               {showSidenav ? (
-                <div className="hover:cursor-pointer block bg-white lg:hidden">
+                <div className="block bg-white hover:cursor-pointer lg:hidden">
                   <span className="solar--close-square-broken iconify h-[40px] w-[40px] transition-all duration-500 ease-in-out"></span>
                 </div>
               ) : (
@@ -158,7 +182,7 @@ const Navbar = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section>      
     </>
   );
 };

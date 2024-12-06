@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import silos from "../img/Chemical-Silos.jpg";
 import hero1 from "../img/hero1.jpg";
 import warehouse from "../img/warehouse.jpg";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Services = () => {
   const location = useLocation();
@@ -223,6 +223,28 @@ const Services = () => {
                 We deliver quality and quantity with efficiency and precision.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      <section className="bg-home flex h-[60vh] w-full justify-end">
+        <div className="flex w-full flex-col justify-center bg-black bg-opacity-70 p-0 text-white md:w-1/2 md:p-10">
+          <div className="mx-auto w-[90%] text-center md:text-start">
+            <h1 className="py-5 font-orbitron text-3xl font-extrabold uppercase tracking-wide sm:text-4xl">
+              Questions?
+            </h1>
+
+            <p className="mb-8 mt-5">
+              Have questions regarding our products or services? Please contact
+              us and we will be happy to assist you.
+            </p>
+
+            <Link
+              to="/contact"
+              className="inline-block w-full items-center justify-center gap-2 bg-blue-800 px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>

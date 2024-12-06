@@ -18,6 +18,13 @@
     background-size: cover;
     background-attachment: fixed;
   }
+
+  .bg-silos{
+    background: url("./img/Chemical-Silos.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 ::-webkit-scrollbar {
