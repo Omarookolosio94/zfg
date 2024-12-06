@@ -6,10 +6,10 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="border-t bg-white">
-      <div className="w-[90%] mx-auto grid grid-cols-1 gap-10 py-20  md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid w-[90%] grid-cols-1 gap-10 py-20 md:grid-cols-2 lg:grid-cols-4">
         <div className="col-span-1 sm:col-span-2">
           <img src={logo} alt="StreamFlo" className="mb-4 h-12" />
-          <p className="w-full lg:w-3/5 text-sm">
+          <p className="w-full text-sm lg:w-3/5">
             StreamFlo Nigeria is a distributor of industrial chemicals, both
             liquid and dry, including solvents, acids, alcohols, esters,
             aliphatic and aromatic hydrocarbons, glycols, glycol ethers,
@@ -81,12 +81,15 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-10 border-t border-gray-200 bg-secondary py-3 text-center font-mont text-sm text-gray-50">
-        Copyright © 2012 - {new Date().getFullYear()} StreamFlo. Website
-        Developed by{" "}
-        <a href="mailto:usewebeffects@gmail.com" className="hover:underline">
-          Use Web Effects
-        </a>
-        .
+        <div className="mx-auto w-[90%]">
+          <p className="">
+            Copyright © 2012 - {new Date().getFullYear()} StreamFlo. Website
+          </p>
+          <a href="mailto:usewebeffects@gmail.com" className="text-xs hover:underline">
+            Developed by Use Web Effects
+          </a>
+          .
+        </div>
       </div>
     </footer>
   );

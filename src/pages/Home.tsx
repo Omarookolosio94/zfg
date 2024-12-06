@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import barrels from "../img/warehouse.jpg";
 import silos from "../img/Chemical-Silos.jpg";
-import siols2 from "../img/hero1.jpg";
+import silos2 from "../img/hero1.jpg";
 
 const Home = () => {
   const services = [
@@ -10,23 +10,26 @@ const Home = () => {
       name: "Custom Blending",
       description:
         "We provide flexible blending capabilities from quart-sized to bulk loads are available.",
+      path: "blending",
     },
     {
       name: "Private Label Packaging",
       description:
         "Packaging options available. We can package your product with our labels and your logo or your own labels.",
+      path: "private-labelling",
     },
     {
       name: "Bulk Options",
       description:
         "We are capable of  providing small bulk as well as large bulk orders as necessary.",
+      path: "bulk-options",
     },
   ];
 
   return (
     <>
       <section className="bg-home flex h-screen w-full">
-        <div className="flex w-full flex-col justify-center bg-blue-600 bg-opacity-80 p-0 text-white md:w-1/2 md:p-10">
+        <div className="flex w-full flex-col justify-center bg-black bg-opacity-70 p-0 text-gray-50 md:w-1/2 md:p-10">
           <div className="mx-auto w-[90%]">
             <h1 className="border-l py-5 pl-5 font-orbitron text-3xl font-extrabold uppercase tracking-wide sm:pl-8 sm:text-4xl">
               Industrial <br /> Chemical <br /> Distributor
@@ -40,7 +43,7 @@ const Home = () => {
 
             <Link
               to="/products"
-              className="flex w-full items-center justify-center gap-2 border border-secondary bg-secondary px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-800 disabled:cursor-not-allowed sm:w-1/3"
+              className="flex w-full items-center justify-center gap-2 bg-blue-800 px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-1/3"
             >
               Browse Products
             </Link>
@@ -58,7 +61,7 @@ const Home = () => {
               <p className="font-light text-gray-100">{service?.description}</p>
 
               <Link
-                to="/services"
+                to={`/services#${service?.path}`}
                 className="mt-5 flex items-center font-ruda uppercase hover:text-blue-800"
               >
                 Learn More
@@ -108,7 +111,7 @@ const Home = () => {
 
             <Link
               to="/about"
-              className="flex w-full items-center justify-center gap-2 border border-secondary bg-secondary px-[10px] py-[10px] font-mont text-[14px] uppercase text-white !opacity-100 transition duration-300 ease-in-out hover:bg-blue-800 disabled:cursor-not-allowed sm:w-1/3"
+              className="flex w-full items-center justify-center gap-2 bg-blue-800 px-[10px] py-[10px] font-mont text-[14px] uppercase text-white !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-1/3"
             >
               Learn More
             </Link>
@@ -120,7 +123,7 @@ const Home = () => {
         <div className="mx-auto flex h-full w-[90%] flex-col items-center justify-between gap-5 py-20 lg:flex-row-reverse lg:py-0">
           <div className="flex h-[40vh] w-full items-center justify-center gap-5 lg:h-[45vh] lg:w-1/2">
             <img
-              src={siols2}
+              src={silos2}
               alt="Chemical Storage"
               className="h-full w-full object-cover shadow-lg lg:w-[80%]"
             />
@@ -146,7 +149,7 @@ const Home = () => {
 
             <Link
               to="/about"
-              className="flex w-full items-center justify-center gap-2 border border-secondary bg-secondary px-[10px] py-[10px] font-mont text-[14px] uppercase text-white !opacity-100 transition duration-300 ease-in-out hover:bg-blue-800 disabled:cursor-not-allowed sm:w-1/3"
+              className="flex w-full items-center justify-center gap-2 bg-blue-800 px-[10px] py-[10px] font-mont text-[14px] uppercase text-white !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-1/3"
             >
               Learn More
             </Link>
@@ -155,7 +158,7 @@ const Home = () => {
       </section>
 
       <section className="bg-hero flex h-[60vh] w-full justify-end">
-        <div className="flex w-full flex-col justify-center bg-blue-600 bg-opacity-80 p-0 text-white md:w-1/2 md:p-10">
+        <div className="flex w-full flex-col justify-center bg-black bg-opacity-70 p-0 text-white md:w-1/2 md:p-10">
           <div className="mx-auto w-[90%] text-center md:text-start">
             <h1 className="py-5 font-orbitron text-3xl font-extrabold uppercase tracking-wide sm:text-4xl">
               Questions?
@@ -168,7 +171,7 @@ const Home = () => {
 
             <Link
               to="/contact"
-              className="inline-block md:flex w-full items-center justify-center gap-2 border border-secondary bg-secondary px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-800 disabled:cursor-not-allowed sm:w-2/3 lg:w-1/3"
+              className="inline-block w-full items-center justify-center gap-2 bg-blue-800 px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
             >
               Contact Us
             </Link>

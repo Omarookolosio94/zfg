@@ -12,7 +12,7 @@ export default function Button({ children, ...rest }: ButtonProps) {
       suppressHydrationWarning
       {...rest}
       className={cx(
-        "flex items-center justify-center gap-2 px-[26px] py-[12px] uppercase font-mont text-[14px] transition duration-300 ease-in-out disabled:cursor-not-allowed",
+        "hover:bg-blue-900 flex items-center justify-center gap-2 bg-blue-800 px-[26px] py-[12px] font-mont text-[14px] uppercase transition duration-300 ease-in-out disabled:cursor-not-allowed",
         rest?.className!,
       )}
     >

@@ -95,23 +95,24 @@ const Navbar = () => {
                 </NavLink>
               ))}
 
-              <Button className="hidden !border !bg-blue-800 !font-[600] !text-white sm:block">
-                GET QUOTATION
+              <Button className="hidden !py-[10px] !border !bg-blue-800 !font-[600] !text-white sm:block">
+                GET A QUOTE
               </Button>
 
-              <button
-                className="block bg-white lg:hidden"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSidenav((state) => !state);
-                }}
-              >
-                {showSidenav ? (
-                  <></>
-                ) : (
+              {showSidenav ? (
+                <div className="hover:cursor-pointer block bg-white lg:hidden">
+                  <span className="solar--close-square-broken iconify h-[40px] w-[40px] transition-all duration-500 ease-in-out"></span>
+                </div>
+              ) : (
+                <button
+                  className="block bg-white lg:hidden"
+                  onClick={() => {
+                    setSidenav((state) => !state);
+                  }}
+                >
                   <span className="solar--hamburger-menu-broken iconify h-[40px] w-[40px] transition-all duration-500 ease-in-out"></span>
-                )}
-              </button>
+                </button>
+              )}
             </div>
           </nav>
         </div>
@@ -152,8 +153,8 @@ const Navbar = () => {
           </nav>
 
           <div className="mx-auto flex w-11/12 items-center justify-center gap-3 pt-5 sm:hidden md:w-4/5">
-            <Button className="w-full !border !bg-blue-800 !font-[600] !text-white sm:w-2/3 md:w-1/2">
-              GET QUOTATION
+            <Button className="w-full !font-[600] !text-white sm:w-2/3 md:w-1/2">
+              GET A QUOTE
             </Button>
           </div>
         </div>
