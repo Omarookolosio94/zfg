@@ -56,3 +56,25 @@ export const scrollWindowToTop = () => {
 
 export const cx = (...classNames: string[]) =>
   classNames.filter(Boolean).join(" ");
+
+export const filterProductQuery = (
+  query: ProductQuery,
+): Partial<ProductQuery> => {
+  const filteredQuery: any = {};
+
+  // Iterate through each key-value pair in the query object
+  Object.entries(query).forEach(([key, value]) => {
+    const typedKey = key as keyof ProductQuery;
+
+    // Only add to filteredQuery if the value is a non-empty string, a true boolean, or a number
+    if (
+      (typeof value === "string" && value !== "") ||
+      (typeof value === "boolean" && value === true) ||
+      typeof value === "number"
+    ) {
+      filteredQuery[typedKey] = value as ProductQuery[typeof typedKey];
+    }
+  });
+
+  return filteredQuery;
+};

@@ -1,15 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { APP_LINKS } from "../systemConst";
 import Button from "./Button";
 import logo from "../../img/semi-logo.png";
 import { cx } from "../helpers";
+import { useProductStore } from "../services/useProductStore";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [showSidenav, setSidenav] = useState(false);
   const [hideSocials, setHideSocials] = useState(false);
+  const navigate = useNavigate();
   const sideNavRef = useRef<HTMLDivElement | null>(null);
   const navbarRef = useRef<HTMLDivElement | null>(null);
+  const quotedProducts = useProductStore((store) => store.quotedProducts);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -30,6 +34,14 @@ const Navbar = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showSidenav]);
 
+  const handleQuote = () => {
+    if (quotedProducts?.length < 1) {
+      return toast.error("Please include at least one products to quotes.");
+    }
+
+    navigate("/quotation");
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (navbarRef.current) {
@@ -44,6 +56,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <>
       <section className="fixed left-0 top-0 z-20 w-full">
@@ -101,12 +114,6 @@ const Navbar = () => {
                   onClick={(e) => {
                     if (link?.disabled) {
                       e?.preventDefault();
-                    } else if (link?.path === "/contact") {
-                      e?.preventDefault();
-                      const contactDiv = document.getElementById("contact");
-                      if (contactDiv) {
-                        contactDiv.scrollIntoView({ behavior: "smooth" });
-                      }
                     }
                   }}
                   className={({ isActive }) =>
@@ -119,9 +126,29 @@ const Navbar = () => {
                 </NavLink>
               ))}
 
-              <Button className="hidden !border !bg-blue-800 !py-[10px] !font-[600] !text-white sm:block">
+              <Button
+                onClick={() => handleQuote()}
+                className="relative hidden !border !bg-blue-800 !py-[10px] !font-[600] !text-white sm:block"
+              >
                 GET A QUOTE
+                {quotedProducts?.length > 0 && (
+                  <span className="absolute -top-2 right-0 h-[26px] w-[26px] rounded-full bg-secondary text-lg font-extrabold text-white">
+                    {quotedProducts?.length}
+                  </span>
+                )}
               </Button>
+
+              <button
+                onClick={() => handleQuote()}
+                className="relative sm:hidden"
+              >
+                <span className="foundation--comment-quotes iconify h-[40px] w-[40px] text-blue-800"></span>
+                {quotedProducts?.length > 0 && (
+                  <span className="absolute -top-2 right-0 h-[26px] w-[26px] rounded-full bg-secondary text-lg font-extrabold text-white">
+                    {quotedProducts?.length}
+                  </span>
+                )}
+              </button>
 
               {showSidenav ? (
                 <div className="block bg-white hover:cursor-pointer lg:hidden">
@@ -156,12 +183,6 @@ const Navbar = () => {
                 onClick={(e) => {
                   if (link?.disabled) {
                     e?.preventDefault();
-                  } else if (link?.path === "/contact") {
-                    e?.preventDefault();
-                    const contactDiv = document.getElementById("contact");
-                    if (contactDiv) {
-                      contactDiv.scrollIntoView({ behavior: "smooth" });
-                    }
                   }
                   setSidenav(false);
                 }}
@@ -177,12 +198,20 @@ const Navbar = () => {
           </nav>
 
           <div className="mx-auto flex w-11/12 items-center justify-center gap-3 pt-5 sm:hidden md:w-4/5">
-            <Button className="w-full !font-[600] !text-white sm:w-2/3 md:w-1/2">
+            <Button
+              onClick={() => handleQuote()}
+              className="relative w-full !font-[600] !text-white sm:w-2/3 md:w-1/2"
+            >
               GET A QUOTE
+              {quotedProducts?.length > 0 && (
+                <span className="absolute -top-2 right-0 h-[26px] w-[26px] rounded-full bg-secondary text-lg font-extrabold text-white">
+                  {quotedProducts?.length}
+                </span>
+              )}
             </Button>
           </div>
         </div>
-      </section>      
+      </section>
     </>
   );
 };

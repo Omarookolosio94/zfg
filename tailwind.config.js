@@ -27,5 +27,8 @@ module.exports = {
       },
     },
   },
-  plugins: [addIconSelectors(["mdi", "logos", "solar"])],
+  plugins: [
+    addIconSelectors(["mdi", "logos", "solar", "pepicons", "ion", "foundation"]),
+    require("@tailwindcss/line-clamp"),
+  ],
 };

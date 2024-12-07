@@ -182,7 +182,7 @@ const About = () => {
             </p>
 
             <Link
-              to="/contact"
+              to="/contacts"
               className="inline-block w-full items-center justify-center gap-2 bg-blue-800 px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
             >
               Contact Us

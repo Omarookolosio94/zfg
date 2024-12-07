@@ -18,8 +18,8 @@ export default function CustomLoader() {
         >
           <circle
             fill="none"
-            stroke-opacity="1"
-            stroke="#EB8B22"
+            strokeOpacity="1"
+            stroke="#1d40b0"
             stroke-width=".5"
             cx="100"
             cy="100"
@@ -54,7 +54,7 @@ export default function CustomLoader() {
             ></animate>
           </circle>
         </svg>
-        <p>Please wait...</p>
+        <p className="text-sm text-blue-800 font-bold">Please wait...</p>
       </div>
     </div>
   );

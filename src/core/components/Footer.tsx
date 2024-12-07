@@ -29,18 +29,12 @@ export default function Footer() {
                 onClick={(e) => {
                   if (link?.disabled) {
                     e?.preventDefault();
-                  } else if (link?.path === "/contact") {
-                    e?.preventDefault();
-                    const contactDiv = document.getElementById("contact");
-                    if (contactDiv) {
-                      contactDiv.scrollIntoView({ behavior: "smooth" });
-                    }
                   }
                 }}
                 className={({ isActive }) =>
                   isActive
                     ? "mb-3 block font-extralight text-blue-800 hover:text-blue-800"
-                    : "mb-3 block font-extralight text-black hover:text-blue-800"
+                    : "mb-3 block font-extralight hover:text-blue-800"
                 }
               >
                 <span className="iconify mr-2 mdi--menu-right"></span>
@@ -56,25 +50,25 @@ export default function Footer() {
           <div className="space-y-3">
             <a
               href="tel:+2341234567890"
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-2 hover:text-blue-800"
             >
-              <span className="iconify text-black mdi--phone"></span>
+              <span className="iconify mdi--phone"></span>
               <span>+234-123-456-7890</span>
             </a>
             <a
               href="mailto:info@streamflo.ng"
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-2 hover:text-blue-800"
             >
-              <span className="iconify text-black mdi--email"></span>
+              <span className="iconify mdi--email"></span>
               <span>info@streamflo.ng</span>
             </a>
             <a
               href="https://www.google.com/maps?q=StreamFlo+Nigeria,+Lagos,+Nigeria"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-2 hover:text-blue-800"
             >
-              <span className="iconify text-black mdi--location"></span>
+              <span className="iconify mdi--location"></span>
               <span>StreamFlo Nigeria, Lagos, Nigeria</span>
             </a>
           </div>
@@ -85,7 +79,10 @@ export default function Footer() {
           <p className="">
             Copyright © 2012 - {new Date().getFullYear()} StreamFlo.
           </p>
-          <a href="mailto:usewebeffects@gmail.com" className="text-xs hover:underline">
+          <a
+            href="mailto:usewebeffects@gmail.com"
+            className="text-xs hover:underline"
+          >
             Website Developed by Use Web Effects
           </a>
           .

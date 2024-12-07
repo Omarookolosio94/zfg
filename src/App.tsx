@@ -15,16 +15,21 @@ import Quotation from "./pages/Quotation";
 import About from "./pages/About";
 import Navbar from "./core/components/Navbar";
 import Footer from "./core/components/Footer";
+import { useProductStore } from "./core/services/useProductStore";
 
 const Home = React.lazy(() => import("./pages/Home"));
 
 function App() {
+  const isLoading = useProductStore((store) => store.isLoading);
+
   return (
     <Router>
       <ScrollToTop />
       <Toaster />
 
       <Navbar />
+
+      {isLoading && <CustomLoader />}
 
       <div className="min-h-[50vh]">
         <Suspense fallback={<CustomLoader />}>
