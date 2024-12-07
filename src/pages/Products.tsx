@@ -38,12 +38,10 @@ const Products = () => {
   }, [searchParams.get("category")]);
 
   useEffect(() => {
-    getCategories();
+    categories?.length < 1 && getCategories();
     getProducts(query);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log(categories);
 
   return (
     <>
@@ -106,23 +104,23 @@ const Products = () => {
           </div>
           <div className="w-full md:w-4/5">
             {productList?.items?.length > 0 ? (
-              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mb-10">
+              <div className="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                 {productList?.items?.map((product) => (
                   <Product key={product?.productId} product={product} />
                 ))}
               </div>
             ) : (
-              <div className="flex h-[40vh] flex-col items-center justify-center gap-3 text-gray-500 mb-10">
+              <div className="mb-10 flex h-[40vh] flex-col items-center justify-center gap-3 text-gray-500">
                 <span className="pepicons--no-entry iconify text-[100px]"></span>
                 <p className="font-medium">No products yet</p>
               </div>
             )}
 
-              <Pagination
-                pageSize={query?.pageSize}
-                pagination={productList}
-                onFetch={fetchMore}
-              />
+            <Pagination
+              pageSize={query?.pageSize}
+              pagination={productList}
+              onFetch={fetchMore}
+            />
           </div>
         </div>
       </section>

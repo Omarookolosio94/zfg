@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import barrels from "../img/warehouse.jpg";
 import silos from "../img/Chemical-Silos.jpg";
 import silos2 from "../img/hero1.jpg";
+import { useProductStore } from "../core/services/useProductStore";
 
 const Home = () => {
   const services = [
@@ -25,6 +26,12 @@ const Home = () => {
       path: "bulk-options",
     },
   ];
+
+  const reset = useProductStore((store) => store.reset);
+
+  useEffect(() => {
+    reset();
+  }, []);
 
   return (
     <>
