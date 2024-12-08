@@ -61,7 +61,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, Props>(function TextArea(
           }}
           {...rest}
           className={cx(
-            "h-auto w-full resize-none text-black border bg-transparent px-3 text-sm outline-none placeholder:text-sm placeholder-shown:font-thin placeholder-shown:text-neutral-600 focus:border-blue-800 disabled:cursor-not-allowed",
+            "h-auto w-full py-2 resize-none text-black border bg-transparent px-3 text-sm outline-none placeholder:text-sm placeholder-shown:font-thin placeholder-shown:text-neutral-600 focus:border-blue-900 disabled:cursor-not-allowed",
             textareaClassName,
           )}
         />

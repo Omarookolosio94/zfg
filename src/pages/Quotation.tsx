@@ -261,12 +261,12 @@ const Quotation = () => {
           <div className="flex flex-col items-center justify-start gap-3 lg:flex-row">
             <Link
               to="/products"
-              className="flex w-full items-center justify-center gap-2 border bg-white px-6 py-3 font-mont text-[14px] uppercase text-secondary !opacity-100 transition duration-300 ease-in-out hover:bg-secondary hover:text-white disabled:cursor-not-allowed lg:w-1/3"
+              className="flex w-full items-center justify-center gap-2 border bg-white px-6 py-3 font-mont text-[14px] uppercase text-secondary !opacity-100 transition duration-300 ease-in-out hover:bg-secondary hover:text-white disabled:cursor-not-allowed lg:!w-1/2"
             >
               Return to Shop
             </Link>
 
-            <Button className="!w-full !px-6 !py-3 !font-extrabold">
+            <Button className="!w-full !px-6 !py-3 !font-extrabold lg:!w-1/2">
               Place Quote Request
             </Button>
           </div>
