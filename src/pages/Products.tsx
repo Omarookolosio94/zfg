@@ -5,6 +5,9 @@ import Select from "../core/components/Select";
 import { useProductStore } from "../core/services/useProductStore";
 import Pagination from "../core/components/Pagination";
 import Product from "./partials/Product";
+import Modal from "../core/components/Modal";
+import ProductDetail from "./partials/ProductDetail";
+import { addMetaData } from "../core/seoHelpers";
 
 const Products = () => {
   const productList = useProductStore((store) => store.productPagination);
@@ -39,12 +42,22 @@ const Products = () => {
 
   useEffect(() => {
     categories?.length < 1 && getCategories();
-    getProducts(query);
+    getProducts({ ...query, pageNumber: 1, pageSize: 12 });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
+      {addMetaData({
+        title: "Products | StreamFlo - Explore Our Chemical Offerings",
+        description:
+          "Browse our extensive catalog of high-quality chemicals designed for various industries, including agriculture, manufacturing, and more.",
+        keywords:
+          "StreamFlo products, chemicals catalog, industrial chemicals, high-quality chemicals",
+        path: "products",
+        locale: "en_NG",
+      })}
+
       <section className="bg-silos flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
@@ -106,7 +119,11 @@ const Products = () => {
             {productList?.items?.length > 0 ? (
               <div className="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                 {productList?.items?.map((product) => (
-                  <Product key={product?.productId} product={product} />
+                  <Product
+                    key={product?.productId}
+                    product={product}
+                    handleOpen={handleViewProduct}
+                  />
                 ))}
               </div>
             ) : (
@@ -146,6 +163,26 @@ const Products = () => {
           </div>
         </div>
       </section>
+
+      {openProductModal && (
+        <Modal
+          bodyStyle="!w-full !h-[100%] lg:!h-[90%] lg:!w-[80%]"
+          onClose={() => {
+            setSelectedProduct(null);
+            setOpenProductModal(false);
+          }}
+        >
+          <ProductDetail
+            boxStyle="!w-[100%] !py-10"
+            product={selectedProduct}
+            onClose={() => {
+              setSelectedProduct(null);
+              setOpenProductModal(false);
+            }}
+            showClose={true}
+          />
+        </Modal>
+      )}
     </>
   );
 };

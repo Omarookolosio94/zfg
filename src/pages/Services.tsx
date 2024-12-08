@@ -3,6 +3,7 @@ import silos from "../img/Chemical-Silos.jpg";
 import hero1 from "../img/hero1.jpg";
 import warehouse from "../img/warehouse.jpg";
 import { Link, useLocation } from "react-router-dom";
+import { addMetaData } from "../core/seoHelpers";
 
 const Services = () => {
   const location = useLocation();
@@ -18,6 +19,16 @@ const Services = () => {
 
   return (
     <>
+      {addMetaData({
+        title: "Services | StreamFlo - Comprehensive Chemical Solutions",
+        description:
+          "StreamFlo offers a wide range of services, including chemical supply, product consultation, and industry-specific solutions, tailored to meet your business needs.",
+        keywords:
+          "StreamFlo services, chemical supply Nigeria, product consultation, industrial chemicals",
+        path: "services",
+        locale: "en_NG",
+      })}
+
       <section className="bg-home flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
@@ -226,7 +237,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="bg-home flex h-[60vh] w-full justify-end">
         <div className="flex w-full flex-col justify-center bg-black bg-opacity-70 p-0 text-white md:w-1/2 md:p-10">
           <div className="mx-auto w-[90%] text-center md:text-start">

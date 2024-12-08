@@ -41,6 +41,18 @@ export default function Footer() {
                 {link?.name}
               </NavLink>
             ))}
+
+            <NavLink
+              to="/privacy-policy"
+              className={({ isActive }) =>
+                isActive
+                  ? "mb-3 block font-extralight text-blue-800 hover:text-blue-800"
+                  : "mb-3 block font-extralight hover:text-blue-800"
+              }
+            >
+              <span className="iconify mr-2 mdi--menu-right"></span>
+              Privacy Policy
+            </NavLink>
           </div>
         </div>
         <div className="col-span-1">

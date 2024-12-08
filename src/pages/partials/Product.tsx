@@ -23,9 +23,21 @@ const Product = ({
   return (
     <div
       key={product?.name}
-      className="h-[260px] overflow-hidden border hover:cursor-pointer sm:h-[360px]"
+      onClick={() => navigate(`/products/${product?.sku}`)}
+      className="h-[300px] overflow-hidden border hover:cursor-pointer sm:h-[360px]"
     >
-      <div className="h-1/2 w-full sm:h-[65%]">
+      <div className="relative h-[58%] w-full border-b sm:h-[65%]">
+        {allowExpansion && (
+          <div
+            className="absolute right-[2px] top-[2px] p-2 hover:cursor-pointer lg:right-[5px] lg:top-[5px]"
+            onClick={(e: any) => {
+              e?.stopPropagation();
+              handleOpen(product);
+            }}
+          >
+            <span className="solar--maximize-square-bold text-secondary iconify h-[32px] w-[32px]" />
+          </div>
+        )}
         <img
           src={product?.images[0]?.url ?? defaultImg}
           alt={product?.images[0]?.alt ?? product?.name}
@@ -44,7 +56,7 @@ const Product = ({
                 e?.stopPropagation();
                 removeFromQuote(product!.sku);
               }}
-              className="!bg-red-500 !px-3 !py-1"
+              className="!bg-red-700 !px-3 !py-1 font-extrabold !text-white hover:!bg-red-800"
             >
               REMOVE FROM QUOTE
             </Button>
@@ -54,7 +66,7 @@ const Product = ({
                 e?.stopPropagation();
                 addToQuote(product!);
               }}
-              className="!px-3 !py-1"
+              className="!px-3 !py-1 !font-extrabold"
             >
               ADD TO QUOTE
             </Button>

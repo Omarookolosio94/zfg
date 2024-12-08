@@ -1,9 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { addMetaData } from "../core/seoHelpers";
 
 const About = () => {
   return (
     <>
+      {addMetaData({
+        title: "About Us | StreamFlo - Chemical Distribution Experts",
+        description:
+          "Discover StreamFlo's journey as Nigeria's trusted chemical distributor. Learn about our commitment to quality, reliability, and customer satisfaction across various industries.",
+        keywords:
+          "StreamFlo, about us, chemical experts Nigeria, trusted chemical supplier, chemical distribution",
+        locale: "en_NG",
+        path: "about",
+      })}
+
       <section className="bg-silos flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
@@ -115,7 +126,9 @@ const About = () => {
 
             <div>
               <div className="mb-5">
-                <h5 className="font-semibold text-black">Comprehensive Product Range</h5>
+                <h5 className="font-semibold text-black">
+                  Comprehensive Product Range
+                </h5>
                 <p>
                   From solvents and acids to laboratory-grade chemicals, we
                   provide the essential building blocks for a wide range of
@@ -124,7 +137,9 @@ const About = () => {
               </div>
 
               <div className="mb-5">
-                <h5 className="font-semibold text-black">Commitment to Quality</h5>
+                <h5 className="font-semibold text-black">
+                  Commitment to Quality
+                </h5>
                 <p>
                   Every product in our catalog is sourced from trusted
                   manufacturers and rigorously tested to ensure it meets the

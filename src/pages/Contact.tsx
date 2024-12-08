@@ -1,9 +1,20 @@
 import React from "react";
 import silos2 from "../img/hero1.jpg";
+import { addMetaData } from "../core/seoHelpers";
 
 const Contact = () => {
   return (
     <>
+      {addMetaData({
+        title: "Contact Us | StreamFlo - Get in Touch",
+        description:
+          "Have questions about our products or services? Contact StreamFlo today for assistance, and our team will be happy to help.",
+        keywords:
+          "StreamFlo contact, get in touch, customer support, chemical supplier Nigeria",
+        path: "contact",
+        locale: "en_NG",
+      })}
+
       <section className="bg-home flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
@@ -40,32 +51,30 @@ const Contact = () => {
               will reach you on time.
             </p>
 
-            <div className="">
-              <div className="space-y-3">
-                <a
-                  href="tel:+2341234567890"
-                  className="flex items-center space-x-2 hover:text-blue-800"
-                >
-                  <span className="iconify text-blue-800 font-semibold mdi--phone"></span>
-                  <span>+234-123-456-7890</span>
-                </a>
-                <a
-                  href="mailto:info@streamflo.ng"
-                  className="flex items-center space-x-2 hover:text-blue-800"
-                >
-                  <span className="iconify text-blue-800 font-semibold mdi--email"></span>
-                  <span>info@streamflo.ng</span>
-                </a>
-                <a
-                  href="https://www.google.com/maps?q=StreamFlo+Nigeria,+Lagos,+Nigeria"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 hover:text-blue-800"
-                >
-                  <span className="iconify text-blue-800 font-semibold mdi--location"></span>
-                  <span>StreamFlo Nigeria, Lagos, Nigeria</span>
-                </a>
-              </div>
+            <div className="space-y-3">
+              <a
+                href="tel:+2341234567890"
+                className="flex items-center space-x-2 hover:text-blue-800"
+              >
+                <span className="iconify font-semibold text-blue-800 mdi--phone"></span>
+                <span>+234-123-456-7890</span>
+              </a>
+              <a
+                href="mailto:info@streamflo.ng"
+                className="flex items-center space-x-2 hover:text-blue-800"
+              >
+                <span className="iconify font-semibold text-blue-800 mdi--email"></span>
+                <span>info@streamflo.ng</span>
+              </a>
+              <a
+                href="https://www.google.com/maps?q=StreamFlo+Nigeria,+Lagos,+Nigeria"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-blue-800"
+              >
+                <span className="iconify font-semibold text-blue-800 mdi--location"></span>
+                <span>StreamFlo Nigeria, Lagos, Nigeria</span>
+              </a>
             </div>
           </div>
         </div>

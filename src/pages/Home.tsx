@@ -4,6 +4,7 @@ import barrels from "../img/warehouse.jpg";
 import silos from "../img/Chemical-Silos.jpg";
 import silos2 from "../img/hero1.jpg";
 import { useProductStore } from "../core/services/useProductStore";
+import { addMetaData } from "../core/seoHelpers";
 
 const Home = () => {
   const services = [
@@ -35,6 +36,16 @@ const Home = () => {
 
   return (
     <>
+      {addMetaData({
+        title: "StreamFlo | Wholesale Chemical Distributor in Nigeria",
+        description:
+          "StreamFlo is Nigeria's leading wholesale distributor of high-quality chemicals for diverse industries. We provide reliable supply, expert support, competitive pricing, and a comprehensive product range to meet all your needs.",
+        keywords:
+          "StreamFlo, wholesale chemicals, Nigeria chemicals distributor, industrial chemicals, reliable supply, chemical support",
+        locale: "en_NG",
+        path: "home",
+      })}
+
       <section className="bg-home flex h-screen w-full">
         <div className="flex w-full flex-col justify-center bg-black bg-opacity-70 p-0 text-gray-50 md:w-1/2 md:p-10">
           <div className="mx-auto w-[90%]">

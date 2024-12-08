@@ -20,7 +20,7 @@ export default function CustomLoader() {
             fill="none"
             strokeOpacity="1"
             stroke="#1d40b0"
-            stroke-width=".5"
+            strokeWidth=".5"
             cx="100"
             cy="100"
             r="0"
