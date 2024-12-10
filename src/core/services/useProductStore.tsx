@@ -25,6 +25,7 @@ type Actions = {
   clearError: () => void;
   setError: (errors: any) => void;
   getProducts: (query: ProductQuery) => Promise<void>;
+  getRandomProducts: (query: ProductQuery) => Promise<void>;
   getProductByParam: (sku: string) => Promise<void>;
   getCategory: () => Promise<void>;
   addToQuote: (product: Product) => void;
@@ -48,7 +49,7 @@ const defaultState: State = {
     categoryId: "",
     listedOnly: false,
     pageNumber: 1,
-    pageSize: 12,
+    pageSize: 9,
   },
   quotedProducts: [],
   categories: [],
@@ -86,6 +87,21 @@ export const useProductStore = create<State & Actions>()(
             productPagination: res?.data?.data,
             isLoading: false,
             query: query,
+          });
+        },
+        getRandomProducts: async () => {
+          set({ isLoading: true });
+
+          var res: UIResponse = await GetProducts({
+            businessId: "",
+            categoryId: "",
+            listedOnly: false,
+            pageNumber: 1,
+            pageSize: 4,
+          });
+          set({
+            productPagination: res?.data?.data,
+            isLoading: false,
           });
         },
         getProductByParam: async (sku) => {

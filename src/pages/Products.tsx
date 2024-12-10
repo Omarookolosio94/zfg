@@ -42,7 +42,7 @@ const Products = () => {
 
   useEffect(() => {
     categories?.length < 1 && getCategories();
-    getProducts({ ...query, pageNumber: 1, pageSize: 12 });
+    getProducts(query);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -128,7 +128,7 @@ const Products = () => {
               </div>
             ) : (
               <div className="mb-10 flex h-[40vh] flex-col items-center justify-center gap-3 text-gray-500">
-                <span className="pepicons--no-entry iconify text-[100px]"></span>
+                <span className="iconify text-[100px] pepicons--no-entry"></span>
                 <p className="font-medium">No products yet</p>
               </div>
             )}

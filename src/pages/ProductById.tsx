@@ -12,7 +12,7 @@ const ProductById = () => {
   const product = useProductStore((store) => store.product);
   const productList = useProductStore((store) => store.productPagination);
   const getProductById = useProductStore((store) => store.getProductByParam);
-  const getProducts = useProductStore((store) => store.getProducts);
+  const getProducts = useProductStore((store) => store.getRandomProducts);
   const { productId } = useParams();
 
   useEffect(() => {
