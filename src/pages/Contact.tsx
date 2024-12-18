@@ -1,24 +1,24 @@
 import React from "react";
-import silos2 from "../img/hero1.jpg";
+import client from "../img/shakingclient.jpg";
 import { addMetaData } from "../core/seoHelpers";
 
 const Contact = () => {
   return (
     <>
       {addMetaData({
-        title: "Contact Us | StreamFlo - Get in Touch",
+        title: "Contact Us | Zorg Financial Group - Get in Touch",
         description:
-          "Have questions about our products or services? Contact StreamFlo today for assistance, and our team will be happy to help.",
+          "Have questions about our financial services? Contact Zorg Financial Group today for assistance, and our team will be happy to help.",
         keywords:
-          "StreamFlo contact, get in touch, customer support, chemical supplier Nigeria",
+          "Zorg Financial Group contact, financial services, Canada, customer support, get in touch",
         path: "contact",
-        locale: "en_NG",
+        locale: "en_CA",
       })}
 
-      <section className="bg-home flex h-[36vh] w-full">
+      <section className="bg-contact flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
-            <h1 className="font-orbitron text-3xl uppercase">Contact</h1>
+            <h1 className="font-orbitron text-xl md:2xl uppercase">Contact</h1>
           </div>
         </div>
       </section>
@@ -27,53 +27,53 @@ const Contact = () => {
         <div className="mx-auto flex h-full w-[90%] flex-col-reverse items-center justify-between gap-5 py-20 lg:flex-row-reverse lg:py-0">
           <div className="flex h-[40vh] w-full items-center justify-center gap-5 lg:h-[45vh] lg:w-1/2">
             <img
-              src={silos2}
-              alt="Chemical Storage"
+              src={client}
+              alt="A professional meeting between a financial consultant and a client"
               className="h-full w-full object-cover shadow-lg lg:w-[80%]"
             />
           </div>
 
           <div className="w-full lg:w-1/2">
-            <h5 className="mb-3 text-lg uppercase text-blue-800">
-              Questions, Looking to order?
+            <h5 className="mb-3 text-lg uppercase text-primary">
+              Questions? Looking to learn more about our services?
             </h5>
 
-            <p className="font-orbitron text-xl font-extrabold uppercase md:text-3xl">
+            <p className="font-orbitron text-xl font-extrabold uppercase md:text-2xl">
               Send Us a Message
             </p>
 
             <p className="mb-8 mt-8">
-              StreamFlo is conveniently located in Lagos, Nigeria, the bustling
-              commercial capital of the country. Our modern facility is designed
-              to meet the needs of our customers with efficiency and precision.
-              We offer reliable delivery services across Lagos, nationwide, and
-              internationally, giving you peace of mind knowing your products
-              will reach you on time.
+              Zorg Financial Group is headquartered in Canada, where we provide
+              a range of financial solutions tailored to meet your needs. Our
+              expert team is committed to delivering exceptional service and
+              ensuring your financial goals are met with precision. Reach out to
+              us today, and experience the difference of working with a trusted
+              financial partner.
             </p>
 
             <div className="space-y-3">
               <a
-                href="tel:+2341234567890"
-                className="flex items-center space-x-2 hover:text-blue-800"
+                href="tel:+1234567890"
+                className="flex items-center space-x-2 hover:text-primary"
               >
-                <span className="iconify font-semibold text-blue-800 mdi--phone"></span>
-                <span>+234-123-456-7890</span>
+                <span className="iconify font-semibold text-primary mdi--phone"></span>
+                <span>+1-234-567-890</span>
               </a>
               <a
-                href="mailto:info@streamflo.ng"
-                className="flex items-center space-x-2 hover:text-blue-800"
+                href="mailto:info@zorgfinancial.ca"
+                className="flex items-center space-x-2 hover:text-primary"
               >
-                <span className="iconify font-semibold text-blue-800 mdi--email"></span>
-                <span>info@streamflo.ng</span>
+                <span className="iconify font-semibold text-primary mdi--email"></span>
+                <span>info@zorgfinancial.ca</span>
               </a>
               <a
-                href="https://www.google.com/maps?q=StreamFlo+Nigeria,+Lagos,+Nigeria"
+                href="https://www.google.com/maps?q=Zorg+Financial+Group,+Canada"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 hover:text-blue-800"
+                className="flex items-center space-x-2 hover:text-primary"
               >
-                <span className="iconify font-semibold text-blue-800 mdi--location"></span>
-                <span>StreamFlo Nigeria, Lagos, Nigeria</span>
+                <span className="iconify font-semibold text-primary mdi--location"></span>
+                <span>Zorg Financial Group, Canada</span>
               </a>
             </div>
           </div>

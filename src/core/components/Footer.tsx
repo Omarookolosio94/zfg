@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../img/semi-logo.png";
+import logo from "../../img/zfg.png";
 import { APP_LINKS } from "../systemConst";
 import { NavLink } from "react-router-dom";
 
@@ -8,20 +8,19 @@ export default function Footer() {
     <footer className="border-t bg-white">
       <div className="mx-auto grid w-[90%] grid-cols-1 gap-10 py-20 md:grid-cols-2 lg:grid-cols-4">
         <div className="col-span-1 sm:col-span-2">
-          <img src={logo} alt="StreamFlo" className="mb-4 h-12" />
+          <img src={logo} alt="Zorg Financial Group" className="mb-4 h-12" />
           <p className="w-full text-sm lg:w-3/5">
-            StreamFlo Nigeria is a distributor of industrial chemicals, both
-            liquid and dry, including solvents, acids, alcohols, esters,
-            aliphatic and aromatic hydrocarbons, glycols, glycol ethers,
-            ketones, and phosphates as well as laboratory and reagent-grade
-            chemicals.
+            Zorg Financial Group is dedicated to providing innovative financial
+            solutions, including wealth management, investment advisory,
+            corporate financing, and insurance services tailored to meet your
+            financial goals.
           </p>
         </div>
         <div className="col-span-1">
           <h5 className="mb-2 text-lg font-bold">Navigation</h5>
-          <div className="mb-8 h-1 w-12 bg-blue-800 md:mx-0"></div>
+          <div className="mb-8 h-1 w-12 bg-primary md:mx-0"></div>
 
-          <div>
+          <div className="text-sm">
             {APP_LINKS?.map((link) => (
               <NavLink
                 key={link?.name}
@@ -33,8 +32,8 @@ export default function Footer() {
                 }}
                 className={({ isActive }) =>
                   isActive
-                    ? "mb-3 block font-extralight text-blue-800 hover:text-blue-800"
-                    : "mb-3 block font-extralight hover:text-blue-800"
+                    ? "hover:text-dark mb-3 block text-primary"
+                    : "hover:text-dark mb-3 block"
                 }
               >
                 <span className="iconify mr-2 mdi--menu-right"></span>
@@ -46,8 +45,8 @@ export default function Footer() {
               to="/privacy-policy"
               className={({ isActive }) =>
                 isActive
-                  ? "mb-3 block font-extralight text-blue-800 hover:text-blue-800"
-                  : "mb-3 block font-extralight hover:text-blue-800"
+                  ? "hover:text-dark mb-3 block text-primary"
+                  : "hover:text-dark mb-3 block"
               }
             >
               <span className="iconify mr-2 mdi--menu-right"></span>
@@ -57,47 +56,40 @@ export default function Footer() {
         </div>
         <div className="col-span-1">
           <h5 className="mb-2 text-lg font-bold">Contact</h5>
-          <div className="mb-8 h-1 w-12 bg-blue-800 md:mx-0"></div>
+          <div className="mb-8 h-1 w-12 bg-primary md:mx-0"></div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 text-sm">
             <a
-              href="tel:+2341234567890"
-              className="flex items-center space-x-2 hover:text-blue-800"
+              href="tel:+2347012345678"
+              className="hover:text-dark flex items-center space-x-2"
             >
               <span className="iconify mdi--phone"></span>
-              <span>+234-123-456-7890</span>
+              <span>+234-701-234-5678</span>
             </a>
             <a
-              href="mailto:info@streamflo.ng"
-              className="flex items-center space-x-2 hover:text-blue-800"
+              href="mailto:contact@zorgfinancial.ng"
+              className="hover:text-dark flex items-center space-x-2"
             >
               <span className="iconify mdi--email"></span>
-              <span>info@streamflo.ng</span>
+              <span>contact@zorgfinancial.ng</span>
             </a>
             <a
-              href="https://www.google.com/maps?q=StreamFlo+Nigeria,+Lagos,+Nigeria"
+              href="https://www.google.com/maps?q=Zorg+Financial+Group,+Victoria+Island,+Lagos"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 hover:text-blue-800"
+              className="hover:text-dark flex items-center space-x-2"
             >
               <span className="iconify mdi--location"></span>
-              <span>StreamFlo Nigeria, Lagos, Nigeria</span>
+              <span>Zorg Financial Group, Canada</span>
             </a>
           </div>
         </div>
       </div>
       <div className="mt-10 border-t border-gray-200 bg-secondary py-3 text-center font-mont text-sm text-gray-50">
         <div className="mx-auto w-[90%]">
-          <p className="">
-            Copyright © 2012 - {new Date().getFullYear()} StreamFlo.
+          <p className="text-sm">
+            Copyright © 2012 - {new Date().getFullYear()} Zorg Financial Group.
           </p>
-          <a
-            href="mailto:usewebeffects@gmail.com"
-            className="text-xs hover:underline"
-          >
-            Website Developed by Use Web Effects
-          </a>
-          .
         </div>
       </div>
     </footer>

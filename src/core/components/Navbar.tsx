@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { APP_LINKS } from "../systemConst";
-import Button from "./Button";
-import logo from "../../img/semi-logo.png";
+import logo from "../../img/zfg.png";
 import { cx } from "../helpers";
 import { useProductStore } from "../services/useProductStore";
 import toast from "react-hot-toast";
@@ -33,14 +32,6 @@ const Navbar = () => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showSidenav]);
-
-  const handleQuote = () => {
-    if (quotedProducts?.length < 1) {
-      return toast.error("Please include at least one products to quotes.");
-    }
-
-    navigate("/quotation");
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,7 +69,7 @@ const Navbar = () => {
                 <span className="iconify mdi--twitter"></span>
               </a>
               <p className="hidden text-[12px] font-light sm:block">
-                STREAMFLO CHEMICAL DISTRIBUTOR
+                ZORG FINANCIAL GROUP
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-3">
@@ -101,12 +92,12 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt=""
-                className="inline-block h-[40px] w-[40px]"
+                className="inline-block h-[32px] w-[32px]"
                 loading="lazy"
               />
             </Link>
 
-            <div className="flex items-center justify-between gap-5 lg:gap-16">
+            <div className="flex items-center justify-between gap-5 text-sm lg:gap-16">
               {APP_LINKS?.map((link) => (
                 <NavLink
                   key={link?.name}
@@ -118,41 +109,17 @@ const Navbar = () => {
                   }}
                   className={({ isActive }) =>
                     isActive
-                      ? "hidden !font-orbitron font-extralight uppercase text-blue-800 hover:text-blue-800 lg:block"
-                      : "hidden !font-orbitron font-extralight uppercase text-black hover:text-blue-800 lg:block"
+                      ? "hidden font-semibold !font-orbitron uppercase text-dark hover:text-dark lg:block"
+                      : "hidden !font-orbitron uppercase text-black hover:text-dark lg:block"
                   }
                 >
                   {link?.name}
                 </NavLink>
               ))}
 
-              <Button
-                onClick={() => handleQuote()}
-                className="relative hidden !border !bg-blue-800 !py-[10px] !font-[600] !text-white sm:block"
-              >
-                GET A QUOTE
-                {quotedProducts?.length > 0 && (
-                  <span className="absolute -top-2 right-0 h-[26px] w-[26px] rounded-full bg-secondary text-lg font-extrabold text-white">
-                    {quotedProducts?.length}
-                  </span>
-                )}
-              </Button>
-
-              <button
-                onClick={() => handleQuote()}
-                className="relative sm:hidden"
-              >
-                <span className="foundation--comment-quotes iconify h-[40px] w-[40px] text-blue-800"></span>
-                {quotedProducts?.length > 0 && (
-                  <span className="absolute -top-2 right-0 h-[26px] w-[26px] rounded-full bg-secondary text-lg font-extrabold text-white">
-                    {quotedProducts?.length}
-                  </span>
-                )}
-              </button>
-
               {showSidenav ? (
                 <div className="block bg-white hover:cursor-pointer lg:hidden">
-                  <span className="solar--close-square-broken iconify h-[40px] w-[40px] transition-all duration-500 ease-in-out"></span>
+                  <span className="iconify h-[40px] w-[40px] transition-all duration-500 ease-in-out solar--close-square-broken"></span>
                 </div>
               ) : (
                 <button
@@ -161,7 +128,7 @@ const Navbar = () => {
                     setSidenav((state) => !state);
                   }}
                 >
-                  <span className="solar--hamburger-menu-broken iconify h-[40px] w-[40px] transition-all duration-500 ease-in-out"></span>
+                  <span className="iconify h-[40px] w-[40px] transition-all duration-500 ease-in-out solar--hamburger-menu-broken"></span>
                 </button>
               )}
             </div>
@@ -188,28 +155,14 @@ const Navbar = () => {
                 }}
                 className={({ isActive }) =>
                   isActive
-                    ? "mb-5 !font-orbitron font-extralight uppercase text-blue-800 hover:text-blue-800"
-                    : "mb-5 !font-orbitron font-extralight uppercase hover:text-blue-800"
+                    ? "mb-5 !font-orbitron uppercase text-blue-800 hover:text-blue-800"
+                    : "mb-5 !font-orbitron uppercase hover:text-blue-800"
                 }
               >
                 <p>{link.name}</p>
               </NavLink>
             ))}
           </nav>
-
-          <div className="mx-auto flex w-11/12 items-center justify-center gap-3 pt-5 sm:hidden md:w-4/5">
-            <Button
-              onClick={() => handleQuote()}
-              className="relative w-full !font-[600] !text-white sm:w-2/3 md:w-1/2"
-            >
-              GET A QUOTE
-              {quotedProducts?.length > 0 && (
-                <span className="absolute -top-2 right-0 h-[26px] w-[26px] rounded-full bg-secondary text-lg font-extrabold text-white">
-                  {quotedProducts?.length}
-                </span>
-              )}
-            </Button>
-          </div>
         </div>
       </section>
     </>

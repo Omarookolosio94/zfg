@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import silos from "../img/Chemical-Silos.jpg";
-import hero1 from "../img/hero1.jpg";
-import warehouse from "../img/warehouse.jpg";
+import financialServices from "../img/planning.jpg";
+import wealthManagement from "../img/homeinsurance.jpg";
+import businessSolutions from "../img/stats3.jpg";
 import { Link, useLocation } from "react-router-dom";
 import { addMetaData } from "../core/seoHelpers";
 
@@ -20,19 +20,19 @@ const Services = () => {
   return (
     <>
       {addMetaData({
-        title: "Services | StreamFlo - Comprehensive Chemical Solutions",
+        title: "Services | Zorg Financial Group - Expert Financial Solutions",
         description:
-          "StreamFlo offers a wide range of services, including chemical supply, product consultation, and industry-specific solutions, tailored to meet your business needs.",
+          "Explore Zorg Financial Group's tailored financial solutions, including wealth management, corporate finance, and business advisory services to help you achieve your financial goals.",
         keywords:
-          "StreamFlo services, chemical supply Nigeria, product consultation, industrial chemicals",
+          "Zorg Financial Group services, wealth management, corporate finance, financial advisory",
         path: "services",
-        locale: "en_NG",
+        locale: "en_CA",
       })}
 
       <section className="bg-home flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
-            <h1 className="font-orbitron text-3xl uppercase">Services</h1>
+            <h1 className="font-orbitron text-xl uppercase md:text-2xl">Our Services</h1>
           </div>
         </div>
       </section>
@@ -40,18 +40,17 @@ const Services = () => {
       <section>
         <div className="mx-auto flex w-[90%] items-center justify-center py-40">
           <div className="w-full text-center lg:w-1/2">
-            <h1 className="mb-3 uppercase text-blue-800">
-              Providing Chemical solutions since 2012
+            <h1 className="mb-3 uppercase text-primary">
+              Trusted Financial Partners Since 2010
             </h1>
             <h5 className="mb-10 text-2xl font-bold text-black">
-              About StreamFlo Nigeria
+              About Zorg Financial Group
             </h5>
-            <p id="blending">
-              At Streamflo Nigeria, we are committed to delivering top-quality
-              chemical solutions tailored to your business needs. With a legacy
-              of excellence, expertise, and reliability, we partner with
-              industries across Nigeria to ensure seamless and efficient service
-              delivery.
+            <p id="financial-advisory">
+              Zorg Financial Group is committed to empowering individuals and
+              businesses with expert financial solutions. With over a decade of
+              experience, we offer personalized services that drive growth,
+              security, and success across diverse financial landscapes.
             </p>
           </div>
         </div>
@@ -61,59 +60,41 @@ const Services = () => {
         <div className="flex h-full flex-col items-center justify-between gap-10 lg:flex-row">
           <div className="flex h-[40vh] w-full items-center justify-center gap-5 lg:h-full lg:w-1/3">
             <img
-              src={silos}
-              alt="Chemical Storage"
+              src={financialServices}
+              alt="Financial Advisory"
               className="h-full w-full object-cover shadow-lg"
             />
           </div>
           <div className="w-full lg:w-2/3 lg:p-8">
             <div className="mx-auto w-[90%]">
-              <h5 className="mb-3 text-lg font-extrabold uppercase text-blue-800">
-                Custom Blending
+              <h5 className="mb-3 text-lg font-extrabold uppercase text-primary">
+                Financial Advisory
               </h5>
 
               <p className="mb-8 mt-8">
-                At Streamflo Nigeria, we understand that every industry has
-                unique requirements. Our Custom Blending Services are designed
-                to meet your specific operational needs. Whether you need
-                specialized formulations for oilfield chemicals, industrial
-                applications, or agricultural solutions, we have the expertise
-                to deliver.
+                Our Financial Advisory Services are designed to help you
+                navigate complex financial decisions with confidence. Whether
+                you're planning for retirement, managing investments, or
+                exploring business opportunities, we provide the expertise to
+                guide you.
               </p>
 
               <div className="mb-6">
                 <p className="font-bold text-black">
-                  Why Choose Our Custom Blending?
+                  Why Choose Our Advisory Services?
                 </p>
                 <ul className="mt-2 list-inside list-disc">
                   <li>
-                    Flexible batch sizes, from small quart-sized blends to bulk
-                    loads.
+                    Comprehensive financial planning tailored to your goals.
                   </li>
-                  <li>
-                    Accurate formulations tailored to your unique
-                    specifications.
-                  </li>
-                  <li>
-                    High-quality control to ensure consistent results for every
-                    batch.
-                  </li>
+                  <li>Expert investment management strategies.</li>
+                  <li>Risk assessment to protect your assets.</li>
                 </ul>
               </div>
 
-              <div className="mb-6">
-                <p className="font-bold text-black">Industries We Serve:</p>
-                <ul className="mt-2 list-inside list-disc">
-                  <li>Oil and Gas</li>
-                  <li>Manufacturing</li>
-                  <li>Construction</li>
-                  <li>Agricultural Solutions</li>
-                </ul>
-              </div>
-
-              <p className="mb-8" id="private-labelling">
-                Let us partner with you to create bespoke solutions that enhance
-                your efficiency, reliability, and success in your industry.
+              <p className="mb-8" id="wealth-management">
+                Partner with Zorg Financial Group to achieve financial clarity
+                and long-term security.
               </p>
             </div>
           </div>
@@ -124,57 +105,40 @@ const Services = () => {
         <div className="flex h-full flex-col items-center justify-between gap-10 lg:flex-row-reverse">
           <div className="flex h-[40vh] w-full items-center justify-center gap-5 lg:h-full lg:w-1/3">
             <img
-              src={hero1}
-              alt="Private Label Packaging"
+              src={wealthManagement}
+              alt="Wealth Management"
               className="h-full w-full object-cover shadow-lg"
             />
           </div>
           <div className="w-full lg:w-2/3 lg:p-8">
             <div className="mx-auto w-[90%]">
-              <h5 className="mb-3 text-lg font-extrabold uppercase text-blue-800">
-                Private Label Packaging
+              <h5 className="mb-3 text-lg font-extrabold uppercase text-primary">
+                Wealth Management
               </h5>
 
               <p className="mb-8 mt-8">
-                At Streamflo Nigeria, we offer customized private label
-                packaging to help your brand stand out in competitive markets.
-                Whether you want to package oilfield chemicals, industrial
-                products, or other solutions, we provide premium packaging that
-                reflects your brand identity.
+                Zorg Financial Group offers comprehensive wealth management
+                services to secure and grow your assets. From portfolio
+                diversification to estate planning, our solutions are tailored
+                to high-net-worth individuals and businesses.
               </p>
 
               <div className="mb-6">
                 <p className="font-bold text-black">
-                  Why Choose Private Label Packaging?
+                  Why Choose Zorg Wealth Management?
                 </p>
                 <ul className="mt-2 list-inside list-disc">
+                  <li>Personalized investment strategies.</li>
                   <li>
-                    Custom-branded labels that showcase your logo and design.
+                    Access to exclusive financial products and opportunities.
                   </li>
-                  <li>
-                    High-quality packaging materials for durability and safety.
-                  </li>
-                  <li>Flexible packaging sizes to meet your business needs.</li>
+                  <li>Holistic wealth protection and tax optimization.</li>
                 </ul>
               </div>
 
-              <div className="mb-6">
-                <p className="font-bold text-black">
-                  Packaging Options Available:
-                </p>
-                <ul className="mt-2 list-inside list-disc">
-                  <li>Barrels, drums, and totes for industrial needs.</li>
-                  <li>Small-volume containers for retail purposes.</li>
-                  <li>
-                    Eco-friendly packaging options for sustainable businesses.
-                  </li>
-                </ul>
-              </div>
-
-              <p className="mb-8" id="bulk-options">
-                Let us handle the packaging while you focus on growing your
-                brand. Streamflo Nigeria ensures your products look professional
-                and are delivered securely.
+              <p className="mb-8" id="business-solutions">
+                Secure your financial future with tailored wealth management
+                solutions from Zorg Financial Group.
               </p>
             </div>
           </div>
@@ -185,53 +149,36 @@ const Services = () => {
         <div className="flex h-full flex-col items-center justify-between gap-10 lg:flex-row">
           <div className="flex h-[40vh] w-full items-center justify-center gap-5 lg:h-full lg:w-1/3">
             <img
-              src={warehouse}
-              alt="Bulk Options"
+              src={businessSolutions}
+              alt="Business Solutions"
               className="h-full w-full object-cover shadow-lg"
             />
           </div>
           <div className="w-full lg:w-2/3 lg:p-8">
             <div className="mx-auto w-[90%]">
-              <h5 className="mb-3 text-lg font-extrabold uppercase text-blue-800">
-                Bulk Options
+              <h5 className="mb-3 text-lg font-extrabold uppercase text-primary">
+                Business Solutions
               </h5>
 
               <p className="mb-8 mt-8">
-                Streamflo Nigeria provides scalable bulk supply solutions
-                tailored to your industry. Whether you need small batches for
-                immediate use or large volumes for ongoing operations, we’ve got
-                you covered.
+                We empower businesses with innovative financial solutions,
+                including corporate finance, business loans, and operational
+                advisory services. Let us help your business thrive in a
+                competitive market.
               </p>
 
               <div className="mb-6">
-                <p className="font-bold text-black">
-                  Why Choose Our Bulk Options?
-                </p>
+                <p className="font-bold text-black">Why Choose Zorg?</p>
                 <ul className="mt-2 list-inside list-disc">
-                  <li>
-                    Capability to handle small and large bulk orders
-                    efficiently.
-                  </li>
-                  <li>Reliable delivery schedules to meet tight deadlines.</li>
-                  <li>Cost-effective pricing for bulk purchases.</li>
-                </ul>
-              </div>
-
-              <div className="mb-6">
-                <p className="font-bold text-black">Suitable for:</p>
-
-                <ul className="mt-2 list-inside list-disc">
-                  <li>Oilfield operations and large-scale industrial needs.</li>
-                  <li>Manufacturing plants requiring continuous supply.</li>
-                  <li>
-                    Distributors and wholesalers looking for reliable partners.
-                  </li>
+                  <li>Flexible financing options to fit your needs.</li>
+                  <li>Strategic guidance for sustainable growth.</li>
+                  <li>Reliable partnerships for long-term success.</li>
                 </ul>
               </div>
 
               <p className="mb-8">
-                Partner with Streamflo Nigeria for all your bulk chemical needs.
-                We deliver quality and quantity with efficiency and precision.
+                Partner with us for customized business solutions that drive
+                efficiency and profitability.
               </p>
             </div>
           </div>
@@ -241,18 +188,18 @@ const Services = () => {
       <section className="bg-home flex h-[60vh] w-full justify-end">
         <div className="flex w-full flex-col justify-center bg-black bg-opacity-70 p-0 text-white md:w-1/2 md:p-10">
           <div className="mx-auto w-[90%] text-center md:text-start">
-            <h1 className="py-5 font-orbitron text-3xl font-extrabold uppercase tracking-wide sm:text-4xl">
-              Questions?
+            <h1 className="py-5 font-orbitron text-xl font-extrabold uppercase tracking-wide sm:text-2xl">
+              Have Questions?
             </h1>
 
             <p className="mb-8 mt-5">
-              Have questions regarding our products or services? Please contact
-              us and we will be happy to assist you.
+              Reach out to Zorg Financial Group for expert advice on our
+              services. We're here to help you achieve your financial goals.
             </p>
 
             <Link
               to="/contacts"
-              className="inline-block w-full items-center justify-center gap-2 bg-blue-800 px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
+              className="inline-block w-full items-center justify-center gap-2 bg-primary px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-dark rounded-md disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
             >
               Contact Us
             </Link>

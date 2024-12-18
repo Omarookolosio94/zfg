@@ -6,16 +6,16 @@ const PrivacyPolicy = () => {
   return (
     <>
       {addMetaData({
-        title: "Privacy Policy | StreamFlo - Your Privacy Matters",
+        title: "Privacy Policy | Zorg Financial Group - Your Privacy Matters",
         description:
-          "Understand how StreamFlo collects, uses, and protects your information. We prioritize your privacy and ensure transparency in our practices.",
+          "Learn how Zorg Financial Group collects, uses, and protects your information. We are committed to ensuring your privacy and maintaining transparency in our data practices.",
         keywords:
-          "StreamFlo privacy policy, data protection, user privacy, chemical supplier privacy",
-        locale: "en_NG",
+          "Zorg Financial Group privacy policy, data protection, user privacy, financial privacy practices",
+        locale: "en_CA",
         path: "privacy-policy",
       })}
 
-      <section className="bg-silos flex h-[36vh] w-full">
+      <section className="bg-contact flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
             <h1 className="font-orbitron text-3xl uppercase leading-none">
@@ -35,10 +35,10 @@ const PrivacyPolicy = () => {
             <h5 className="mb-3 font-bold text-black">Introduction</h5>
 
             <p>
-              At StreamFlo, we value your trust and are committed to protecting
-              your personal information. This Privacy Policy outlines how we
-              collect, use, and safeguard your data in compliance with
-              applicable laws and regulations.
+              At Zorg Financial Group, we value your trust and are committed to
+              protecting your personal information. This Privacy Policy outlines
+              how we collect, use, and safeguard your data in compliance with
+              applicable privacy laws and regulations.
             </p>
           </div>
 
@@ -54,12 +54,16 @@ const PrivacyPolicy = () => {
             <ul className="list-inside list-disc space-y-2">
               <li>Personal information: Name, email address, phone number.</li>
               <li>
-                Business information: Company name, address, and related
-                details.
+                Financial information: Account details, transaction history, and
+                payment information.
               </li>
               <li>
-                Usage data: Information about your interactions with our
-                website, such as IP address, browser type, and browsing
+                Business information: Company name, address, and related details
+                (if applicable).
+              </li>
+              <li>
+                Usage data: Information about your interactions with our website
+                and services, such as IP address, browser type, and browsing
                 behavior.
               </li>
             </ul>
@@ -73,14 +77,19 @@ const PrivacyPolicy = () => {
               The information we collect is used for the following purposes:
             </p>
             <ul className="list-inside list-disc space-y-2">
-              <li>To provide and improve our products and services.</li>
-              <li>To process your orders and respond to inquiries.</li>
               <li>
-                To communicate updates, promotions, and other relevant content.
+                To provide and improve our financial products and services.
+              </li>
+              <li>
+                To process your applications, transactions, and inquiries.
+              </li>
+              <li>
+                To communicate important updates, promotional offers, and
+                relevant content.
               </li>
               <li>
                 To ensure the security and functionality of our website and
-                systems.
+                financial systems.
               </li>
             </ul>
           </div>
@@ -96,11 +105,15 @@ const PrivacyPolicy = () => {
             <ul className="list-inside list-disc space-y-2">
               <li>
                 With trusted service providers who assist in operating our
-                business (e.g., payment processors, delivery services).
+                business (e.g., payment processors, IT support, and auditing).
               </li>
               <li>
                 To comply with legal obligations or protect our rights and
                 interests.
+              </li>
+              <li>
+                With regulators and law enforcement agencies, as required by
+                applicable laws.
               </li>
             </ul>
           </div>
@@ -108,10 +121,10 @@ const PrivacyPolicy = () => {
           <div className="mb-10">
             <h3 className="mb-3 font-bold text-black">Data Security</h3>
             <p>
-              We employ industry-standard security measures to protect your
-              information from unauthorized access, alteration, or disclosure.
-              However, no online system is 100% secure, and we cannot guarantee
-              absolute security.
+              Zorg Financial Group employs industry-standard security measures
+              to protect your information from unauthorized access, alteration,
+              or disclosure. While we strive to safeguard your data, no online
+              system is 100% secure, and we cannot guarantee absolute security.
             </p>
           </div>
 
@@ -122,7 +135,10 @@ const PrivacyPolicy = () => {
               <li>Access and review the information we hold about you.</li>
               <li>Request corrections to your personal data.</li>
               <li>Opt-out of receiving marketing communications from us.</li>
-              <li>Request deletion of your personal data.</li>
+              <li>
+                Request deletion of your personal data, subject to legal and
+                regulatory requirements.
+              </li>
             </ul>
           </div>
 
@@ -131,41 +147,41 @@ const PrivacyPolicy = () => {
               Updates to This Policy
             </h3>
             <p>
-              We may update this Privacy Policy from time to time to reflect
-              changes in our practices or legal requirements. Please check this
-              page periodically for updates.
+              We may update this Privacy Policy periodically to reflect changes
+              in our practices or legal obligations. Please check this page
+              regularly for updates.
             </p>
           </div>
 
           <div>
-            <h3 className="mb-3 text-black font-bold">Contact Us</h3>
+            <h3 className="mb-3 font-bold text-black">Contact Us</h3>
             <p className="mb-3">
               If you have any questions or concerns about this Privacy Policy or
               how we handle your information, please contact us:
             </p>
             <div className="space-y-3">
               <a
-                href="tel:+2341234567890"
+                href="tel:+14161234567"
                 className="flex items-center space-x-2 hover:text-blue-800"
               >
                 <span className="iconify font-semibold text-blue-800 mdi--phone"></span>
-                <span>+234-123-456-7890</span>
+                <span>+1-416-123-4567</span>
               </a>
               <a
-                href="mailto:info@streamflo.ng"
+                href="mailto:privacy@zorgfinancial.ca"
                 className="flex items-center space-x-2 hover:text-blue-800"
               >
                 <span className="iconify font-semibold text-blue-800 mdi--email"></span>
-                <span>info@streamflo.ng</span>
+                <span>privacy@zorgfinancial.ca</span>
               </a>
               <a
-                href="https://www.google.com/maps?q=StreamFlo+Nigeria,+Lagos,+Nigeria"
+                href="https://www.google.com/maps?q=Zorg+Financial+Group,+Toronto,+Canada"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-blue-800"
               >
                 <span className="iconify font-semibold text-blue-800 mdi--location"></span>
-                <span>StreamFlo Nigeria, Lagos, Nigeria</span>
+                <span>Zorg Financial Group, Toronto, Canada</span>
               </a>
             </div>
           </div>

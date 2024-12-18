@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;400&family=Montserrat:wght@100&family=Orbitron&family=Ruda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100");
 
 @tailwind base;
 @tailwind components;
@@ -6,21 +6,28 @@
 
 @layer components {
   .bg-home {
-    background: url("./img/factory.jpg") no-repeat;
+    background: url("./img/meeting2.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
   }
 
-  .bg-hero {
-    background: url("./img/warehouse.jpg") no-repeat;
+  .bg-about {
+    background: url("./img/statline.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
   }
 
-  .bg-silos {
-    background: url("./img/Chemical-Silos.jpg") no-repeat;
+  .bg-contact {
+    background: url("./img/shakingclient.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .bg-contact-home {
+    background: url("./img/homeinsurance.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -50,36 +57,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.fira-sans-condensed-extralight {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 100;
-  font-style: normal;
-}
-
-.fira-sans-condensed-regular {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.orbitron {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.ruda {
-  font-family: "Ruda", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
   font-style: normal;
 }
 

@@ -1,7 +1,7 @@
 export const APP_LINKS = [
   {
-    name: "Products",
-    path: "/products",
+    name: "Home",
+    path: "/home",
     disabled: false,
   },
   {

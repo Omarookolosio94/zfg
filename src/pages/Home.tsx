@@ -1,69 +1,63 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import barrels from "../img/warehouse.jpg";
-import silos from "../img/Chemical-Silos.jpg";
-import silos2 from "../img/hero1.jpg";
-import { useProductStore } from "../core/services/useProductStore";
+import meeting from "../img/meeting.jpg";
+import meeting2 from "../img/meeting2.jpg";
+import stat from "../img/statline.jpg";
+import stat2 from "../img/stats.jpg";
 import { addMetaData } from "../core/seoHelpers";
 
 const Home = () => {
   const services = [
     {
-      name: "Custom Blending",
+      name: "Wealth Management",
       description:
-        "We provide flexible blending capabilities from quart-sized to bulk loads are available.",
-      path: "blending",
+        "Our wealth management services help you achieve your financial goals with tailored investment strategies.",
+      path: "wealth-management",
     },
     {
-      name: "Private Label Packaging",
+      name: "Retirement Planning",
       description:
-        "Packaging options available. We can package your product with our labels and your logo or your own labels.",
-      path: "private-labelling",
+        "Plan for a secure and comfortable retirement with our expert financial advice and solutions.",
+      path: "retirement-planning",
     },
     {
-      name: "Bulk Options",
+      name: "Small Business Consulting",
       description:
-        "We are capable of  providing small bulk as well as large bulk orders as necessary.",
-      path: "bulk-options",
+        "Empowering small businesses with expert financial advice and strategies to achieve sustainable growth.",
+      path: "small-business-consulting",
     },
   ];
-
-  const reset = useProductStore((store) => store.reset);
-
-  useEffect(() => {
-    reset();
-  }, []);
 
   return (
     <>
       {addMetaData({
-        title: "StreamFlo | Wholesale Chemical Distributor in Nigeria",
+        title: "Zorg Financial Group | Trusted Financial Services in Canada",
         description:
-          "StreamFlo is Nigeria's leading wholesale distributor of high-quality chemicals for diverse industries. We provide reliable supply, expert support, competitive pricing, and a comprehensive product range to meet all your needs.",
+          "Zorg Financial Group provides expert financial services including wealth management, retirement planning, insurance solutions, and small business consulting to clients across Canada.",
         keywords:
-          "StreamFlo, wholesale chemicals, Nigeria chemicals distributor, industrial chemicals, reliable supply, chemical support",
-        locale: "en_NG",
+          "Zorg Financial Group, financial services Canada, wealth management, retirement planning, insurance, small business consulting, trusted financial advisors",
+        locale: "en_CA",
         path: "home",
       })}
 
       <section className="bg-home flex h-screen w-full">
         <div className="flex w-full flex-col justify-center bg-black bg-opacity-70 p-0 text-gray-50 md:w-1/2 md:p-10">
           <div className="mx-auto w-[90%]">
-            <h1 className="border-l py-5 pl-5 font-orbitron text-3xl font-extrabold uppercase tracking-wide sm:pl-8 sm:text-4xl">
-              Industrial <br /> Chemical <br /> Distributor
+            <h1 className="border-l py-5 pl-5 font-orbitron text-2xl font-extrabold uppercase tracking-wide sm:pl-8 sm:text-3xl">
+              Trusted Financial <br /> Services Provider
             </h1>
 
             <p className="mb-8 mt-5">
-              The one-stop-shop for Industrial chemicals. Providing a wide range
-              of chemicals from liquid to dry, solvents, acids, alcohols, esters
-              or hydrocarbons, we've got you covered.
+              Zorg Financial Group offers expert financial solutions to help you
+              achieve your goals. From wealth management to small business
+              consulting, we have you covered.
             </p>
 
             <Link
-              to="/products"
-              className="flex w-full items-center justify-center gap-2 bg-blue-800 px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-1/3"
+              to="/services"
+              className="hover:bg-dark flex w-full items-center justify-center gap-2 rounded-md bg-[#0fa0cd] px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out disabled:cursor-not-allowed sm:w-1/3"
             >
-              Browse Products
+              Explore Services
             </Link>
           </div>
         </div>
@@ -74,13 +68,13 @@ const Home = () => {
           {services?.map((service) => (
             <div key={service.name}>
               <h5 className="mb-2 text-lg text-white">{service?.name}</h5>
-              <div className="mb-6 h-1 w-12 bg-blue-800 md:mx-0"></div>
+              <div className="mb-6 h-1 w-12 bg-primary md:mx-0"></div>
 
-              <p className="font-light text-gray-100">{service?.description}</p>
+              <p className="font-light text-sm text-gray-100">{service?.description}</p>
 
               <Link
                 to={`/services#${service?.path}`}
-                className="mt-5 flex items-center font-ruda uppercase hover:text-blue-800"
+                className="mt-5 flex items-center text-primary font-ruda text-sm font-light hover:text-dark"
               >
                 Learn More
                 <span className="iconify h-3 mdi--greater-than"></span>
@@ -94,42 +88,41 @@ const Home = () => {
         <div className="mx-auto flex h-full w-[90%] flex-col items-center justify-between gap-5 py-20 lg:flex-row lg:py-0">
           <div className="flex h-[30vh] w-full gap-5 lg:h-[45vh] lg:w-1/2">
             <img
-              src={barrels}
-              alt="Chemical Storage"
-              className="w-[48%] object-cover shadow-lg"
+              src={stat}
+              alt="Financial statistics and insights"
+              className="w-[48%] rounded-md object-cover shadow-lg"
             />
             <img
-              src={silos}
-              alt="Chemical Tanks"
-              className="w-[48%] object-cover shadow-lg"
+              src={stat2}
+              alt="Detailed financial analytics"
+              className="w-[48%] rounded-md object-cover shadow-lg"
             />
           </div>
 
           <div className="w-full lg:w-1/2">
-            <h5 className="mb-3 text-lg uppercase text-blue-800">
-              About StreamFlo Chemical
+            <h5 className="mb-3 text-lg uppercase text-primary">
+              About Zorg Financial Group
             </h5>
 
-            <p className="font-orbitron text-xl font-extrabold uppercase md:text-3xl">
-              Top Notch Chemical Provider
+            <p className="font-orbitron text-xl font-extrabold uppercase md:text-2xl">
+              Expert Financial Services
             </p>
 
             <p className="mb-3 mt-8">
-              The one-stop-shop for Industrial chemicals. Providing a wide range
-              of chemicals from liquid to dry, solvents, acids, alcohols, esters
-              or hydrocarbons, we&apos;ve got you covered.
+              Zorg Financial Group provides tailored financial solutions to
+              individuals and businesses, ensuring your success at every stage
+              of life.
             </p>
 
             <p className="mb-8">
-              At StreamsFlo, we are committed to providing top-quality products
-              and exceptional services that meet our customers' unique needs.
-              Contact us today to learn more about how we can help service your
-              chemical requirements.
+              From comprehensive wealth management to insurance solutions, our
+              expert team is committed to delivering exceptional service.
+              Contact us today to learn more.
             </p>
 
             <Link
               to="/about"
-              className="flex w-full items-center justify-center gap-2 bg-blue-800 px-[10px] py-[10px] font-mont text-[14px] uppercase text-white !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-1/3"
+              className="hover:bg-dark flex w-full items-center justify-center gap-2 rounded-md bg-primary px-[10px] py-[10px] font-mont text-[14px] uppercase text-white !opacity-100 transition duration-300 ease-in-out disabled:cursor-not-allowed sm:w-1/3"
             >
               Learn More
             </Link>
@@ -141,33 +134,30 @@ const Home = () => {
         <div className="mx-auto flex h-full w-[90%] flex-col items-center justify-between gap-5 py-20 lg:flex-row-reverse lg:py-0">
           <div className="flex h-[40vh] w-full items-center justify-center gap-5 lg:h-[45vh] lg:w-1/2">
             <img
-              src={silos2}
-              alt="Chemical Storage"
-              className="h-full w-full object-cover shadow-lg lg:w-[80%]"
+              src={meeting}
+              alt="Meeting with clients at Zorg Financial Group"
+              className="h-full w-full rounded-md object-cover shadow-lg lg:w-[80%]"
             />
           </div>
 
           <div className="w-full lg:w-1/2">
-            <h5 className="mb-3 text-lg uppercase text-blue-800">
-              Serving customers worldwide
+            <h5 className="mb-3 text-lg uppercase text-primary">
+              Serving Clients Across Canada
             </h5>
 
-            <p className="font-orbitron text-xl font-extrabold uppercase md:text-3xl">
-              Strategically located in Lagos,Nigeria
+            <p className="font-orbitron text-xl font-extrabold uppercase md:text-2xl">
+              Strategic Expertise for Your Future
             </p>
 
             <p className="mb-8 mt-8">
-              StreamFlo is conveniently located in Lagos, Nigeria, the bustling
-              commercial capital of the country. Our modern facility is designed
-              to meet the needs of our customers with efficiency and precision.
-              We offer reliable delivery services across Lagos, nationwide, and
-              internationally, giving you peace of mind knowing your products
-              will reach you on time.
+              Zorg Financial Group operates nationwide from Canada, providing
+              strategic financial guidance and reliable solutions. Our team is
+              dedicated to delivering results for our clients.
             </p>
 
             <Link
               to="/about"
-              className="flex w-full items-center justify-center gap-2 bg-blue-800 px-[10px] py-[10px] font-mont text-[14px] uppercase text-white !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-1/3"
+              className="hover:bg-dark flex w-full items-center justify-center gap-2 rounded-md bg-primary px-[10px] py-[10px] font-mont text-[14px] uppercase text-white !opacity-100 transition duration-300 ease-in-out disabled:cursor-not-allowed sm:w-1/3"
             >
               Learn More
             </Link>
@@ -175,21 +165,21 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-hero flex h-[60vh] w-full justify-end">
+      <section className="bg-contact-home flex h-[60vh] w-full justify-end">
         <div className="flex w-full flex-col justify-center bg-black bg-opacity-70 p-0 text-white md:w-1/2 md:p-10">
           <div className="mx-auto w-[90%] text-center md:text-start">
-            <h1 className="py-5 font-orbitron text-3xl font-extrabold uppercase tracking-wide sm:text-4xl">
+            <h1 className="py-5 font-orbitron text-xl font-extrabold uppercase tracking-wide sm:text-2xl">
               Questions?
             </h1>
 
             <p className="mb-8 mt-5">
-              Have questions regarding our products or services? Please contact
-              us and we will be happy to assist you.
+              Have questions regarding our services or need advice? Please
+              contact us, and we will be happy to assist you.
             </p>
 
             <Link
               to="/contacts"
-              className="inline-block w-full items-center justify-center gap-2 bg-blue-800 px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
+              className="hover:bg-dark inline-block w-full items-center justify-center gap-2 rounded-md bg-primary px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
             >
               Contact Us
             </Link>

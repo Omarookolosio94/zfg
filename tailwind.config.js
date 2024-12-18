@@ -6,8 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: () => ({
-        primary: "#1E3A8A", // Dark Blue
+        primary: "#0fa0cd", // Dark Blue
         secondary: "#1d1d1d",
+        dark: "#116683",
         accent: "#F97316", // Bright Orange (Action buttons, highlights)
         "accent-hover": "#EA670F", // Darker Orange (Hover state for buttons)
         white: "#FFFFFF", // White (Text on buttons, dark backgrounds)
@@ -16,9 +17,6 @@ module.exports = {
         shadow: "rgba(0, 0, 0, 0.1)", // Optional box shadow for button hover
       }),
       fontFamily: {
-        fira: ["Fira Sans Condensed", "sans-serif"],
-        orbitron: ["Orbitron", "sans-serif"],
-        ruda: ["Ruda", "sans-serif"],
         mont: ["Montserrat", "sans-serif"],
       },
       transitionProperty: {
@@ -28,7 +26,16 @@ module.exports = {
     },
   },
   plugins: [
-    addIconSelectors(["mdi", "logos", "solar", "pepicons", "ion", "foundation", "oi", "mi"]),
+    addIconSelectors([
+      "mdi",
+      "logos",
+      "solar",
+      "pepicons",
+      "ion",
+      "foundation",
+      "oi",
+      "mi",
+    ]),
     require("@tailwindcss/line-clamp"),
   ],
 };
