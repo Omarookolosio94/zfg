@@ -3,7 +3,6 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { APP_LINKS } from "../systemConst";
 import logo from "../../img/zfg.png";
 import { cx } from "../helpers";
-import { useProductStore } from "../services/useProductStore";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
@@ -12,7 +11,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const sideNavRef = useRef<HTMLDivElement | null>(null);
   const navbarRef = useRef<HTMLDivElement | null>(null);
-  const quotedProducts = useProductStore((store) => store.quotedProducts);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {

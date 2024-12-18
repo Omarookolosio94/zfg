@@ -10,7 +10,6 @@ import { ScrollToTop } from "./core/hooks/ScrollToTop";
 import CustomLoader from "./core/components/CustomLoader";
 import Navbar from "./core/components/Navbar";
 import Footer from "./core/components/Footer";
-import { useProductStore } from "./core/services/useProductStore";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Contact = React.lazy(() => import("./pages/Contact"));
@@ -20,7 +19,6 @@ const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 function App() {
-  const isLoading = useProductStore((store) => store.isLoading);
 
   return (
     <Router>
@@ -28,8 +26,6 @@ function App() {
       <Toaster />
 
       <Navbar />
-
-      {isLoading && <CustomLoader />}
 
       <div className="min-h-[50vh]">
         <Suspense fallback={<CustomLoader />}>

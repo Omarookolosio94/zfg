@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
       <section className="bg-contact flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
-            <h1 className="font-orbitron text-3xl uppercase leading-none">
+            <h1 className="font-orbitron text-xl md:text-2xl uppercase leading-none">
               Privacy Policy
             </h1>
             <br />
@@ -162,25 +162,25 @@ const PrivacyPolicy = () => {
             <div className="space-y-3">
               <a
                 href="tel:+14161234567"
-                className="flex items-center space-x-2 hover:text-blue-800"
+                className="flex items-center space-x-2 hover:text-dark"
               >
-                <span className="iconify font-semibold text-blue-800 mdi--phone"></span>
+                <span className="iconify font-semibold text-primary mdi--phone"></span>
                 <span>+1-416-123-4567</span>
               </a>
               <a
                 href="mailto:privacy@zorgfinancial.ca"
-                className="flex items-center space-x-2 hover:text-blue-800"
+                className="flex items-center space-x-2 hover:text-dark"
               >
-                <span className="iconify font-semibold text-blue-800 mdi--email"></span>
+                <span className="iconify font-semibold text-primary mdi--email"></span>
                 <span>privacy@zorgfinancial.ca</span>
               </a>
               <a
                 href="https://www.google.com/maps?q=Zorg+Financial+Group,+Toronto,+Canada"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 hover:text-blue-800"
+                className="flex items-center space-x-2 hover:text-dark"
               >
-                <span className="iconify font-semibold text-blue-800 mdi--location"></span>
+                <span className="iconify font-semibold text-primary mdi--location"></span>
                 <span>Zorg Financial Group, Toronto, Canada</span>
               </a>
             </div>
