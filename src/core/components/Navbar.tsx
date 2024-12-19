@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { APP_LINKS } from "../systemConst";
+import { APP_LINKS, contacts } from "../systemConst";
 import logo from "../../img/zfg.png";
 import { cx } from "../helpers";
-import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [showSidenav, setSidenav] = useState(false);
@@ -60,25 +59,25 @@ const Navbar = () => {
         >
           <div className="mx-auto flex w-[90%] flex-col items-center justify-between py-2 font-mont text-[16px] text-shade md:flex-row">
             <div className="flex items-center gap-3">
-              <a href="http://" className="hidden hover:text-white md:block">
-                <span className="iconify mdi--facebook"></span>
-              </a>
-              <a href="http://" className="hidden hover:text-white md:block">
-                <span className="iconify mdi--twitter"></span>
-              </a>
               <p className="hidden text-[12px] font-light sm:block">
                 ZORG FINANCIAL GROUP
               </p>
             </div>
             <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-3">
-              <a href="tel:+" className="flex items-center gap-2">
+              <a
+                href={`tel:${contacts.phone}`}
+                className="flex items-center gap-2"
+              >
                 <span className="iconify mdi--phone"></span>
-                <p className="text-[14px]">+234(0)700-000-0000</p>
+                <p className="text-[14px]">{contacts.phone}</p>
               </a>
 
-              <a href="mailto:" className="flex items-center gap-2">
+              <a
+                href={`mailto:${contacts.email}`}
+                className="flex items-center gap-2"
+              >
                 <span className="iconify mdi--email"></span>
-                <p className="text-[14px]">info@streamflo.com</p>
+                <p className="text-[14px]">{contacts?.email}</p>
               </a>
             </div>
           </div>
@@ -107,8 +106,8 @@ const Navbar = () => {
                   }}
                   className={({ isActive }) =>
                     isActive
-                      ? "hidden font-semibold !font-orbitron uppercase text-dark hover:text-dark lg:block"
-                      : "hidden !font-orbitron uppercase text-black hover:text-dark lg:block"
+                      ? "text-dark hover:text-dark hidden !font-orbitron font-semibold uppercase lg:block"
+                      : "hover:text-dark hidden !font-orbitron uppercase text-black lg:block"
                   }
                 >
                   {link?.name}
@@ -153,8 +152,8 @@ const Navbar = () => {
                 }}
                 className={({ isActive }) =>
                   isActive
-                    ? "mb-5 !font-orbitron uppercase text-blue-800 hover:text-blue-800"
-                    : "mb-5 !font-orbitron uppercase hover:text-blue-800"
+                    ? "mb-5 !font-orbitron uppercase text-primary hover:text-dark"
+                    : "mb-5 !font-orbitron uppercase hover:text-dark"
                 }
               >
                 <p>{link.name}</p>

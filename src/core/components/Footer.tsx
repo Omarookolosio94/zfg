@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../img/zfg.png";
-import { APP_LINKS } from "../systemConst";
+import { APP_LINKS, contacts } from "../systemConst";
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {
@@ -60,27 +60,27 @@ export default function Footer() {
 
           <div className="space-y-3 text-sm">
             <a
-              href="tel:+2347012345678"
+              href={`tel:${contacts.phone}`}
               className="hover:text-dark flex items-center space-x-2"
             >
               <span className="iconify mdi--phone"></span>
-              <span>+234-701-234-5678</span>
+              <span>{contacts?.phone}</span>
             </a>
             <a
-              href="mailto:contact@zorgfinancial.ng"
+              href={`mailto:${contacts.email}`}
               className="hover:text-dark flex items-center space-x-2"
             >
               <span className="iconify mdi--email"></span>
-              <span>contact@zorgfinancial.ng</span>
+              <span>{contacts.email}</span>
             </a>
             <a
-              href="https://www.google.com/maps?q=Zorg+Financial+Group,+Victoria+Island,+Lagos"
+              href={`https://www.google.com/maps?q=${contacts.address}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-dark flex items-center space-x-2"
             >
               <span className="iconify mdi--location"></span>
-              <span>Zorg Financial Group, Canada</span>
+              <span>{contacts.address}</span>
             </a>
           </div>
         </div>

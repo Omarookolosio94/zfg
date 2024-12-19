@@ -20,3 +20,9 @@ export const APP_LINKS = [
     disabled: false,
   },
 ];
+
+export const contacts = {
+  phone: "+1-234-567-890",
+  email: "contact@zorgfinancial.ca",
+  address: "25 Fairview Mississauga East L5B 3Y8",
+};

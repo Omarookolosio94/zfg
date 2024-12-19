@@ -34,19 +34,19 @@ const NotFound = () => {
             </h5>
 
             <div className="mt-4 flex flex-col gap-4 text-gray-700">
-              <Link to="/home" className="hover:text-blue-800 hover:underline">
+              <Link to="/home" className="hover:text-dark hover:underline">
                 <span className="iconify mr-2 mdi--menu-right"></span>
                 Return to the homepage
               </Link>
 
-              <Link to="/about" className="hover:text-blue-800 hover:underline">
+              <Link to="/about" className="hover:text-dark hover:underline">
                 <span className="iconify mr-2 mdi--menu-right"></span>
                 Learn more about us and our financial solutions
               </Link>
 
               <Link
                 to="/services"
-                className="hover:text-blue-800 hover:underline"
+                className="hover:text-dark hover:underline"
               >
                 <span className="iconify mr-2 mdi--menu-right"></span>
                 Discover the financial services we offer
@@ -54,7 +54,7 @@ const NotFound = () => {
 
               <Link
                 to="/resources"
-                className="hover:text-blue-800 hover:underline"
+                className="hover:text-dark hover:underline"
               >
                 <span className="iconify mr-2 mdi--menu-right"></span>
                 Explore our educational resources and tools
@@ -78,7 +78,7 @@ const NotFound = () => {
 
             <Link
               to="/contact"
-              className="inline-block w-full items-center justify-center gap-2 bg-blue-800 px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-blue-900 disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
+              className="inline-block rounded-md w-full items-center justify-center gap-2 bg-primary px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-dark disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
             >
               Contact Us
             </Link>

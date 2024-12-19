@@ -1,6 +1,7 @@
 import React from "react";
 import client from "../img/shakingclient.jpg";
 import { addMetaData } from "../core/seoHelpers";
+import { contacts } from "../core/systemConst";
 
 const Contact = () => {
   return (
@@ -18,7 +19,7 @@ const Contact = () => {
       <section className="bg-contact flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
-            <h1 className="font-orbitron text-xl md:2xl uppercase">Contact</h1>
+            <h1 className="md:2xl font-orbitron text-xl uppercase">Contact</h1>
           </div>
         </div>
       </section>
@@ -53,27 +54,27 @@ const Contact = () => {
 
             <div className="space-y-3">
               <a
-                href="tel:+1234567890"
+                href={`tel:${contacts.phone}`}
                 className="flex items-center space-x-2 hover:text-primary"
               >
                 <span className="iconify font-semibold text-primary mdi--phone"></span>
-                <span>+1-234-567-890</span>
+                <span>{contacts?.phone}</span>
               </a>
               <a
-                href="mailto:info@zorgfinancial.ca"
+                href={`mailto:${contacts.email}`}
                 className="flex items-center space-x-2 hover:text-primary"
               >
                 <span className="iconify font-semibold text-primary mdi--email"></span>
-                <span>info@zorgfinancial.ca</span>
+                <span>{contacts.email}</span>
               </a>
               <a
-                href="https://www.google.com/maps?q=Zorg+Financial+Group,+Canada"
+                href={`https://www.google.com/maps?q=${contacts.address}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-primary"
               >
                 <span className="iconify font-semibold text-primary mdi--location"></span>
-                <span>Zorg Financial Group, Canada</span>
+                <span>{contacts.address}</span>
               </a>
             </div>
           </div>

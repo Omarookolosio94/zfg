@@ -18,7 +18,9 @@ const About = () => {
       <section className="bg-about flex h-[36vh] w-full">
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-70 text-gray-50">
           <div className="mx-auto mt-[14vh] w-[90%] md:mt-[10vh]">
-            <h1 className="font-orbitron text-xl uppercase md:text-2xl">About</h1>
+            <h1 className="font-orbitron text-xl uppercase md:text-2xl">
+              About
+            </h1>
           </div>
         </div>
       </section>
@@ -64,7 +66,7 @@ const About = () => {
       <section className="bg-secondary">
         <div className="mx-auto flex w-[90%] items-center justify-center py-36">
           <div className="w-full text-center lg:w-1/2">
-            <h5 className="mb-10 text-xl md:text-2xl font-bold text-gray-50">
+            <h5 className="mb-10 text-xl font-bold text-gray-50 md:text-2xl">
               Our Mission
             </h5>
             <p className="text-gray-100">
@@ -105,9 +107,10 @@ const About = () => {
 
             <p className="mb-3">
               For over a decade, Zorg Financial Group has been at the forefront
-              of Nigeria’s financial sector, driving innovation and growth. Join
-              us as we continue to redefine the landscape of financial solutions
-              with integrity, expertise, and a customer-first approach.
+              of Nigeria&apos;s financial sector, driving innovation and growth.
+              Join us as we continue to redefine the landscape of financial
+              solutions with integrity, expertise, and a customer-first
+              approach.
             </p>
           </div>
 
@@ -120,8 +123,8 @@ const About = () => {
               <div className="mb-5">
                 <h5 className="font-semibold text-black">Tailored Solutions</h5>
                 <p>
-                  We understand that every client’s needs are unique, and we
-                  work closely with you to provide personalized financial
+                  We understand that every client&apos;s needs are unique, and
+                  we work closely with you to provide personalized financial
                   strategies.
                 </p>
               </div>
@@ -162,7 +165,7 @@ const About = () => {
       <section className="bg-secondary">
         <div className="mx-auto flex w-[90%] items-center justify-center py-36">
           <div className="w-full text-center lg:w-1/2">
-            <h5 className="mb-10 text-xl md:text-2xl font-bold text-gray-50">
+            <h5 className="mb-10 text-xl font-bold text-gray-50 md:text-2xl">
               Our Vision
             </h5>
             <p className="text-gray-100">
@@ -188,7 +191,7 @@ const About = () => {
 
             <Link
               to="/contacts"
-              className="inline-block w-full items-center justify-center gap-2 bg-primary px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out hover:bg-dark rounded-md disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
+              className="hover:bg-dark inline-block w-full items-center justify-center gap-2 rounded-md bg-primary px-[26px] py-[10px] font-mont text-[14px] uppercase !opacity-100 transition duration-300 ease-in-out disabled:cursor-not-allowed sm:w-2/3 md:flex lg:w-1/3"
             >
               Contact Us
             </Link>
